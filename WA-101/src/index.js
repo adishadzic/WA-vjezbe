@@ -21,7 +21,7 @@ app.get("/prognoza", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send(
-    "http://localhost:3000/datum - vraća trenutni datum i vrijeme, http://localhost:3000/prognoza - vraća nasumičnu rečenicu"
+    "http://localhost:3000/datum - vraća trenutno datum i vrijeme, http://localhost:3000/prognoza - vraća nasumičnu rečenicu"
   );
 });
 
