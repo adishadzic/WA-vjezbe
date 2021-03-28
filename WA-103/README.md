@@ -1,0 +1,1 @@
+#### (WA-103) Konfigurirati public direktorij za isporučivanje statičkih datoteka. Napraviti mali primjer Vue aplikacije/komponente koja se nalazi u index.html datoteci i koja poziva back-end kod iz zadatka 2. te prikazuje real-time datum i prognozu
