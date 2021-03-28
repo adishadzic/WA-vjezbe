@@ -1,11 +1,13 @@
 import express from "express";
 import moment from "moment";
+import cors from "cors";
 
 const app = express();
-//const port = 3000;
+const port = 3000;
 
+app.use(cors());
 app.get("/datum", (req, res) => {
-  let date = moment().format("l, h:mm");
+  let date = moment().format("DD.MM.YYYY. HH:mm");
   res.send(`${date}`);
 });
 
@@ -21,8 +23,8 @@ app.get("/prognoza", (req, res) => {
 
 app.get("/", (req, res) => {
   res.send(
-    "http://localhost:3000/datum - vraća trenutni datum i vrijeme, http://localhost:3000/prognoza - vraća nasumičnu rečenicu"
+    "http://localhost:3000/datum - vraća trenutni datum i vrijeme <br> http://localhost:3000/prognoza - vraća random prognozu"
   );
 });
 
-app.listen(3000, () => console.log(`Slušam na portu 3000`));
+app.listen(port, () => console.log(`Slušam na portu ${port}`));
