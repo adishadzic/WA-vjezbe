@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+        <h4>Vrijeme: {{date}}</h4>
+        <h4>Prognoza: {{weather}}</h4>
+    </div>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        date:"",
+        weather:""
+      },
+      async created() {
+          const datum = await fetch("http://localhost:3000/datum");
+          this.date = await datum.text();
+
+          console.log(datum)
+
+          const prognoza = await fetch("http://localhost:3000/prognoza");
+          this.weather = await prognoza.text();
+
+          console.log(prognoza)
+      }
+    })
+  </script>
+</body>
+</html>
