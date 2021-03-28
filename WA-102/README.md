@@ -1,3 +1,4 @@
+#### Zadatak: 
 #### (WA-102) Implementirati backend jednostavne web aplikaciju koja definira nekoliko ruta:
 - [x] /dodaj - dodaje nasumično odabrani broj između 0 i 100 u listu brojeva (može biti prazna u početku)
 - [x] /dohvati - dohvaća listu i ispisuje ju kao HTTP odgovor u obliku gdje su brojevi odvojeni
