@@ -8,7 +8,7 @@ let add = (req, res) => {
   let broj = randomNumber(100);
   console.log(broj);
   numbersArray.push(broj);
-  res.send("Broj " + parseInt(broj) + " spremljen u listu");
+  res.send("Broj " + broj + " spremljen u listu");
 };
 
 export default add;
